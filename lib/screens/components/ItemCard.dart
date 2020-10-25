@@ -21,7 +21,7 @@ class ItemCard extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(kDefaultPaddin),
+              padding: EdgeInsets.all(kDefaultPadding),
 //          height: 180,
 //          width: 160,
               decoration: BoxDecoration(
@@ -35,7 +35,7 @@ class ItemCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+            padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 4),
             child: Text(
               product.title,
               style: TextStyle(color: kTextLightColor),

@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        SizedBox(width: kDefaultPaddin / 2),
+        SizedBox(width: kDefaultPadding / 2),
       ],
 //        actions: [Icon(Icons.backspace)],
     );

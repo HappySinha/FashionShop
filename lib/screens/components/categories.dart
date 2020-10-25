@@ -13,9 +13,9 @@ class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin),
+      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
       child: SizedBox(
-        height: 25,
+        height: 22,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
@@ -32,7 +32,7 @@ class _CategoriesState extends State<Categories> {
           });
         },
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -44,7 +44,7 @@ class _CategoriesState extends State<Categories> {
                         selectedIndex == index ? kTextColor : kTextLightColor),
               ),
               Container(
-                margin: EdgeInsets.only(top: kDefaultPaddin / 4),
+                margin: EdgeInsets.only(top: kDefaultPadding / 4),
                 height: 2,
                 width: 30,
                 color:

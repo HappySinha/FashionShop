@@ -37,8 +37,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                   margin: EdgeInsets.only(top: size.height * 0.3),
                   padding: EdgeInsets.only(
                     top: size.height * 0.12,
-                    left: kDefaultPaddin,
-                    right: kDefaultPaddin,
+                    left: kDefaultPadding,
+                    right: kDefaultPadding,
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.95),
@@ -50,11 +50,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                   child: Column(
                     children: [
                       colorAndSize(),
-                      SizedBox(height: kDefaultPaddin / 2),
+                      SizedBox(height: kDefaultPadding / 2),
                       description(),
                       SizedBox(height: 40),
                       counterFavBtn(),
-                      SizedBox(height: kDefaultPaddin / 2),
+                      SizedBox(height: kDefaultPadding / 2),
                       cartBuy()
                     ],
                   ),
@@ -70,7 +70,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   Padding cartBuy() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin),
+      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
       child: Row(
         children: [cart(), buy()],
       ),
@@ -102,7 +102,7 @@ class _ProductDetailsState extends State<ProductDetails> {
       decoration: BoxDecoration(
           border: Border.all(color: widget.product.color),
           borderRadius: BorderRadius.circular(16)),
-      margin: EdgeInsets.only(right: kDefaultPaddin),
+      margin: EdgeInsets.only(right: kDefaultPadding),
       child: SizedBox(
         width: 64,
         height: 50,
@@ -239,7 +239,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   Padding description() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin),
+      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
       child: Text(
         widget.product.description,
         style: TextStyle(height: 1.5, fontSize: 16),
@@ -249,7 +249,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   Padding productTitleWithImage() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -263,7 +263,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           SizedBox(
-            height: kDefaultPaddin,
+            height: kDefaultPadding,
           ),
           Row(
             children: [
@@ -326,7 +326,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           icon: SvgPicture.asset("assets/icons/cart.svg"),
           onPressed: () {},
         ),
-        SizedBox(width: kDefaultPaddin / 2),
+        SizedBox(width: kDefaultPadding / 2),
       ],
     );
   }
@@ -347,7 +347,7 @@ class ColorDot extends StatelessWidget {
       height: 24,
       width: 24,
       margin:
-          EdgeInsets.only(top: kDefaultPaddin / 4, right: kDefaultPaddin / 2),
+          EdgeInsets.only(top: kDefaultPadding / 4, right: kDefaultPadding / 2),
       padding: EdgeInsets.all(2.5),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
@@ -387,7 +387,7 @@ class _CartCounterState extends State<CartCounter> {
           },
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin / 2),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
           child: Text(numOfItem.toString().padLeft(2, "0"),
               style: Theme.of(context).textTheme.headline6),
         ),

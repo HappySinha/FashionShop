@@ -4,7 +4,7 @@ import 'package:fashion_shop/screens/components/ProductDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'ItemCard.dart';
-import 'categorries.dart';
+import 'categories.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Text(
             "Woman",
             style: Theme.of(context)
@@ -25,14 +25,14 @@ class Body extends StatelessWidget {
         Categories(),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: GridView.builder(
               itemCount: products.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 0.75,
-                mainAxisSpacing: kDefaultPaddin,
-                crossAxisSpacing: kDefaultPaddin,
+                mainAxisSpacing: kDefaultPadding,
+                crossAxisSpacing: kDefaultPadding,
               ),
               itemBuilder: (context, index) => ItemCard(
                 product: products[index],
